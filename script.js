@@ -19,3 +19,11 @@ function son() {
         document.getElementById('son2').innerHTML = son2;
     }
 }
+
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+  document.getElementById("xato").innerHTML = myObj.age;
+}
+xmlhttp.open("GET", "bag.json");
+xmlhttp.send();
