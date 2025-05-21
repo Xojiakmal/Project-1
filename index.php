@@ -1,3 +1,9 @@
+<?php
+$arr = ['bir', 'ikki', 'uch'];
+
+$myJson = json_encode($arr);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +24,15 @@
     </style>
 </head>
 <body>
-    <form action="index.html" method="post" onsubmit="return abd()" name="form">
+    <form action="" method="post" onsubmit="return abd()" name="form">
         <div id="son1"></div>
         <div id="bel">+</div>
         <div id="son2"></div>
         =
         <input type="tel" id="jav" name="jav"><br>
         <button type="submit">Yuborish</button>
+        <br>
+        <div id="xato"></div>
     </form>
 
     <script src="script.js"></script>
