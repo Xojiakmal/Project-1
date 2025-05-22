@@ -1,7 +1,14 @@
-// document.getElementById('son1').innerHTML = 6;
-document.getElementById('son2').innerHTML = 4;
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+  document.getElementById("xato").innerHTML = myObj.age;
+   let son1 = parseInt(myObj.son1);
+   let son2 = myObj.son2;
+   son();
+}
+xmlhttp.open("GET", "bag.json");
+xmlhttp.send();
 
-son()
 function abd() {
     let X = document.forms['form']['jav'].value;
     if (X == "") {
@@ -13,17 +20,7 @@ function abd() {
 }
 function son() {
     if (true) {
-        let son1 = Math.floor(Math.random()*(10));
         document.getElementById('son1').innerHTML = son1;
-        let son2 = Math.floor(Math.random()*(10));
         document.getElementById('son2').innerHTML = son2;
     }
 }
-
-const xmlhttp = new XMLHttpRequest();
-xmlhttp.onload = function() {
-  const myObj = JSON.parse(this.responseText);
-  document.getElementById("xato").innerHTML = myObj.age;
-}
-xmlhttp.open("GET", "bag.json");
-xmlhttp.send();
