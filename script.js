@@ -11,22 +11,22 @@
 let jav = document.getElementById('jav').textContent;
 console.log(jav);
 
-document.getElementById('jav').style.borderColor='red';
 document.getElementById('xato').style.color='red';
 
-function abd() {
-    let X = document.forms['form']['jav'].value;
-    let son1 = document.getElementById('son1').textContent;
-    let son2 = document.getElementById('son2').textContent;
-    // let jav = document.getElementById('jav').textContent;
+// function abd() {
+//     let X = document.forms['form']['jav'].value;
+//     let son1 = document.getElementById('son1').textContent;
+//     let son2 = document.getElementById('son2').textContent;
+//     // let jav = document.getElementById('jav').textContent;
     
-    let bel = document.getElementById('bel').textContent;
-    if ((son1 + son2) == jav) {
-        return true;
-    }
-    else if(X == "") {
-        document.getElementById('xato').innerHTML = "Javob kiritmadingiz!";
-
-        return false;
-    }
-}
+//     let bel = document.getElementById('bel').textContent;
+//     if ((son1 + son2) == jav) {
+//         return true;
+//     }
+//     else if(X == "") {
+//         document.getElementById('xato').innerHTML = "Javob kiritmadingiz!";
+//         document.getElementById('jav').style.borderColor='red';
+        
+//         return false;
+//     }
+// }

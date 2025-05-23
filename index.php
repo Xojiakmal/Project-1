@@ -10,11 +10,13 @@ if (!isset($_SESSION['lvl'])) {
     $_SESSION['son2'] = rand(1,30);
     $_SESSION['bel'] = rand(1,4);
     $_SESSION['lvl']++;
-}else {
-    $xato = "Javobingiz xato!";
 }
-print_r($_SESSION);
-print_r($_POST)
+elseif ($_POST['jav'] == '') {
+    $xato = "Javob kiritmadingiz!";
+}
+
+// print_r($_SESSION);
+// print_r($_POST);
 // session_destroy();
 ?>
 <!DOCTYPE html>
@@ -38,6 +40,7 @@ print_r($_POST)
 </head>
 <body>
     <form action="" method="post" onsubmit="return abd()" name="form">
+        <h2><?=$_SESSION['lvl']?> Level</h2>
         <div id="son1"><?=$_SESSION['son1']?></div>
         <div id="bel">+</div>
         <div id="son2"><?=$_SESSION['son2']?></div>
