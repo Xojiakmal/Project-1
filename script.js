@@ -1,26 +1,32 @@
-const xmlhttp = new XMLHttpRequest();
-xmlhttp.onload = function() {
-  const myObj = JSON.parse(this.responseText);
-  document.getElementById("xato").innerHTML = myObj.age;
-   let son1 = parseInt(myObj.son1);
-   let son2 = myObj.son2;
-   son();
-}
-xmlhttp.open("GET", "bag.json");
-xmlhttp.send();
+// const xmlhttp = new XMLHttpRequest();
+// xmlhttp.onload = function() {
+//   const myObj = JSON.parse(this.responseText);
+// //   document.getElementById("xato").innerHTML = myObj.age;
+//    let son1 = myObj.son1;
+//    let son2 = myObj.son2;
+//    son();
+// }
+// xmlhttp.open("GET", "bag.json");
+// xmlhttp.send();
+let jav = document.getElementById('jav').textContent;
+console.log(jav);
+
+document.getElementById('jav').style.borderColor='red';
+document.getElementById('xato').style.color='red';
 
 function abd() {
     let X = document.forms['form']['jav'].value;
-    if (X == "") {
-        document.getElementById('jav').style.borderColor='red';
-        document.getElementById('xato').style.color='red';
-        document.getElementById('xato').innerHTML = "Javob kiritmadingiz";
-        return false;
+    let son1 = document.getElementById('son1').textContent;
+    let son2 = document.getElementById('son2').textContent;
+    // let jav = document.getElementById('jav').textContent;
+    
+    let bel = document.getElementById('bel').textContent;
+    if ((son1 + son2) == jav) {
+        return true;
     }
-}
-function son() {
-    if (true) {
-        document.getElementById('son1').innerHTML = son1;
-        document.getElementById('son2').innerHTML = son2;
+    else if(X == "") {
+        document.getElementById('xato').innerHTML = "Javob kiritmadingiz!";
+
+        return false;
     }
 }
