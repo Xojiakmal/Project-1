@@ -8,10 +8,10 @@
 // }
 // xmlhttp.open("GET", "bag.json");
 // xmlhttp.send();
-let jav = document.getElementById('jav').textContent;
-console.log(jav);
+// let jav = document.getElementById('jav').textContent;
+// console.log(jav);
 
-document.getElementById('xato').style.color='red';
+// document.getElementById('xato').style.color='red';
 
 // function abd() {
 //     let X = document.forms['form']['jav'].value;

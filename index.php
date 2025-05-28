@@ -5,14 +5,15 @@ if (!isset($_SESSION['lvl'])) {
     $_SESSION['son1'] = rand(1,30);
     $_SESSION['son2'] = rand(1,30);
     $_SESSION['bel'] = rand(1,4);
-}elseif (($_SESSION['son1'] + $_SESSION['son2']) == $_POST['jav'] and isset($_POST['jav'])) {
+}elseif (($_SESSION['son1'] + $_SESSION['son2']) == $_GET['jav'] and isset($_GET['jav'])) {
     $_SESSION['son1'] = rand(1,30);
     $_SESSION['son2'] = rand(1,30);
     $_SESSION['bel'] = rand(1,4);
     $_SESSION['lvl']++;
+    header('Locate:script.js?');
 }
 elseif ($_POST['jav'] == '') {
-    $xato = "Javob kiritmadingiz!";
+    $xato = "Javob kiriting";
 }
 
 // print_r($_SESSION);
@@ -39,7 +40,7 @@ elseif ($_POST['jav'] == '') {
     </style>
 </head>
 <body>
-    <form action="" method="post" onsubmit="return abd()" name="form">
+    <form action="" method="GET" onsubmit="return abd()" name="form">
         <h2><?=$_SESSION['lvl']?> Level</h2>
         <div id="son1"><?=$_SESSION['son1']?></div>
         <div id="bel">+</div>
@@ -48,7 +49,7 @@ elseif ($_POST['jav'] == '') {
         <input type="tel" id="jav" name="jav"><br>
         <button type='submit'>Yuborish</button>
         <br>
-        <div id="xato"><?=$xato?></div>
+        <h2 id="xato"><?=$xato?></h2>
     </form>
 
     <script src="script.js"></script>
