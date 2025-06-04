@@ -1,0 +1,56 @@
+div{
+    display:inline-block;
+}
+body{
+    background: #000;
+    color: white;
+    cursor:default;
+}
+input{
+    width: 90px;
+    height: 60px;
+    font-size: 54px;
+    background: #000;
+    color: white;
+    border: white solid 1px;
+    border-radius: 5px;
+}
+form {
+    font-size: 60px;
+    text-align: center;
+}
+.lvl{
+    padding: 7px;
+    font-size: 25px;
+    border: white 2px solid;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+}
+form button{
+    border: white 2px solid;
+    border-radius: 20px;
+    min-width:140px;
+    height: 50px;
+    background: none;
+    color: white;
+    font-size: 25px;
+}
+form button:hover{
+    background: white;
+    color:black;
+}
+.container{
+    width: 40%;
+    margin: 10% 30%;
+}
+@media only screen and (max-width: 600px){
+    .container{
+        width: 100%;
+        margin: 0;
+    }
+    form{
+        width: 100%;
+    }
+}
